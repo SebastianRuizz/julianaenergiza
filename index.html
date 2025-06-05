@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boutique Daniela Sandoval</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  </head>
+
+
+  <body>
+    <!-- BOTÓN HAMBURGUESA -->
+    <button id="hamburger" class="hamburger">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo5.png" alt="Logo Daniela Sandoval" />
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#inicio"><i class="fa fa-home"></i> Inicio</a>
+          </li>
+          <li>
+            <a href="#servicios"><i class="fa fa-scissors"></i> Servicios</a>
+          </li>
+          <li>
+            <a href="#categorias"><i class="fa fa-tags"></i> Ropa</a>
+          </li>
+          <li>
+            <a href="#galeria"><i class="fa fa-image"></i> Galería</a>
+          </li>
+          <li>
+            <a href="#nosotros"><i class="fa fa-users"></i> Nosotros</a>
+          </li>
+          <li>
+            <a href="#contacto"><i class="fa fa-envelope"></i> Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button id="toggleDarkMode" class="modo-btn">
+          <i class="fa fa-moon"></i> Noche
+        </button>
+        <div class="redes">
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://wa.me/573234815565" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content" id="mainContent">
+      <!--  SECCIÓN 1: HERO CON VIDEO -->
+      <header class="hero-video" id="inicio">
+        <div class="video-container">
+          <video autoplay muted loop playsinline class="video-bg">
+            <source src="img/video.mp4" type="video/mp4" />
+          
+          </video>
+          <div class="overlay"></div>
+          <div class="contenido-hero">
+            <h1>Estilo que inspira</h1>
+            <p>Moda femenina moderna para mujeres auténticas</p>
+            <a href="#categorias" class="btn-hero">Explorar colección</a>
+          </div>
+        </div>
+      </header>
+
+      <!--  SECCIÓN 2: SERVICIOS -->
+      <section id="servicios" class="seccion-servicios">
+        <div class="contenedor-servicios">
+          <div class="tarjeta-servicio">
+            <i class="fa fa-tshirt"></i>
+            <h3>Moda exclusiva</h3>
+            <p>Prendas únicas seleccionadas para resaltar tu estilo.</p>
+          </div>
+          <div class="tarjeta-servicio">
+            <i class="fa fa-user-friends"></i>
+            <h3>Asesoría personalizada</h3>
+            <p>Te ayudamos a elegir lo que mejor se adapta a ti.</p>
+          </div>
+          <div class="tarjeta-servicio">
+            <i class="fa fa-shipping-fast"></i>
+            <h3>Envíos rápidos</h3>
+            <p>Recibe tus prendas en la puerta de tu casa en tiempo récord.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--  SECCIÓN 3: CATEGORÍAS DE ROPA -->
+      <section id="categorias" class="seccion-categorias">
+        <h2>NUESTRA COLECCIÓN</h2>
+
+        <div class="filtros">
+          <button class="active" onclick="filtrarCategorias('all')">Todos</button>
+          <button onclick="filtrarCategorias('blusa')">Blusas</button>
+          <button onclick="filtrarCategorias('vestido')">Vestidos</button>
+          <button onclick="filtrarCategorias('falda')">Faldas</button>
+        </div>
+        
+        <div class="categorias-grid">
+          <div class="tarjeta-categoria blusa show">
+            <div class="imagen-producto">
+              <img src="img/galeria1.jpeg" class="img-front" />
+              <img src="img/galeria2.jpeg" class="img-back" />
+            </div>
+            <h3>Blusa Estilo Romántico</h3>
+            <p>$89.900</p>
+            <button>Añadir al carrito</button>
+          </div>
+        
+          <div class="tarjeta-categoria vestido show">
+            <div class="imagen-producto">
+              <img src="img/galeria3.jpeg" class="img-front" />
+              <img src="img/galeria4.jpeg" class="img-back" />
+            </div>
+            <h3>Vestido Lino Natural</h3>
+            <p>$129.900</p>
+            <button>Añadir al carrito</button>
+          </div>
+        
+          <div class="tarjeta-categoria falda show">
+            <div class="imagen-producto">
+              <img src="images/falda1-front.jpg" class="img-front" />
+              <img src="images/falda1-back.jpg" class="img-back" />
+            </div>
+            <h3>Falda Midi Plisada</h3>
+            <p>$99.900</p>
+            <button>Añadir al carrito</button>
+          </div>
+        
+          <div class="tarjeta-categoria blusa show">
+            <div class="imagen-producto">
+              <img src="images/blusa2-front.jpg" class="img-front" />
+              <img src="images/blusa2-back.jpg" class="img-back" />
+            </div>
+            <h3>Blusa Cuello Alto</h3>
+            <p>$75.000</p>
+            <button>Añadir al carrito</button>
+          </div>
+        
+          <div class="tarjeta-categoria vestido show">
+            <div class="imagen-producto">
+              <img src="images/vestido2-front.jpg" class="img-front" />
+              <img src="images/vestido2-back.jpg" class="img-back" />
+            </div>
+            <h3>Vestido Escote V</h3>
+            <p>$149.000</p>
+            <button>Añadir al carrito</button>
+          </div>
+        </div>
+      </section>
+
+      <!--  SECCIÓN 4: GALERÍA COLLAGE -->
+      <section id="galeria" class="galeria-slider">
+        <div class="slide active" style="background-image: url('img/galeria1.jpg');">
+          <div class="texto-slide">Colección Floral – Elegancia que florece en cada temporada.</div>
+        </div>
+        <div class="slide" style="background-image: url('img/galeria2.jpg');">
+          <div class="texto-slide">Estilo Urbano – Comodidad y actitud para todos tus días.</div>
+        </div>
+        <div class="slide" style="background-image: url('img/galeria3.jpg');">
+          <div class="texto-slide">Minimal Chic – Menos es más, y más estilizado.</div>
+        </div>
+        <div class="slide" style="background-image: url('img/galeria4.jpg');">
+          <div class="texto-slide">Verano Vivo – Colores que iluminan tu personalidad.</div>
+        </div>
+        <div class="slide" style="background-image: url('img/galeria5.jpg');">
+          <div class="texto-slide">Noche Elegante – Brilla con confianza donde vayas.</div>
+        </div>
+        <div class="slide" style="background-image: url('img/galeria6.jpg');">
+          <div class="texto-slide">Noche Elegante – Brilla con confianza donde vayas.</div>
+        </div>
+        <div class="slide" style="background-image: url('img/galeria7.jpg');">
+          <div class="texto-slide">Noche Elegante – Brilla con confianza donde vayas.</div>
+        </div>
+        <div class="botones-slider">
+          <button onclick="moverSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="moverSlider(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+     
+      <!-- ✅ SECCIÓN 5: NOSOTROS -->
+      <section id="nosotros" class="seccion-nosotros">
+        <div class="contenedor-nosotros">
+          <div class="texto-nosotros">
+            <h2>Sobre Daniela Sandoval Boutique</h2>
+            <p>
+              Nuestra boutique nace de la pasión por la moda femenina, el
+              detalle y la elegancia. Nos dedicamos a vestir a mujeres
+              auténticas con estilo moderno, delicado y poderoso.
+            </p>
+            <p>
+              Con más de 5 años de experiencia en el mundo de la moda, hemos
+              creado colecciones que inspiran, empoderan y reflejan belleza en
+              cada costura.
+            </p>
+          </div>
+
+          <div class="imagen-nosotros slider-nosotros">
+            <img
+              src="img/galeria1.jpeg"
+              alt="Nosotras 1"
+              class="slide active"
+            />
+            <img src="img/galeria2.jpeg" alt="Nosotras 2" class="slide" />
+            <img src="img/galeria3.jpeg " alt="Nosotras 3" class="slide" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ SECCIÓN 6: CONTACTO -->
+      <section class="seccion-contacto-bg">
+        <div class="contenedor-contacto-bg">
+          
+          <!-- Formulario -->
+          <form class="formulario-contacto-bg">
+            <h2>Escríbenos para una mejor asesoría</h2>
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo" required />
+            <textarea rows="4" placeholder="Tu mensaje..." required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+      
+          <!-- Frase motivacional e imagen -->
+          <div class="texto-contacto-info">
+            <h3>Conecta con tu estilo</h3>
+            <p>"Tu mejor versión empieza con la actitud y un buen outfit"</p>
+            <img src="images/contacto-chic.jpg" alt="Imagen inspiracional" />
+          </div>
+      
+        </div>
+      
+        <!-- Redes sociales -->
+        <div class="redes-contacto">
+          <a href="#" class="red fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/573002003000" class="red wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="red ig" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </section>
+
+      <!-- ✅ SECCIÓN 7: FOOTER -->
+      <footer>
+        <div class="footer-col footer-logo">
+          <img src="images/logo-daniela.png" alt="Logo Daniela Sandoval" class="logo-footer" />
+          <p>Moda que empodera tu esencia</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#categorias">Colecciones</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-col">
+          <h4>Contáctanos</h4>
+          <ul class="footer-contact">
+            <li>Email: contacto@danielasandoval.com</li>
+            <li>Tel: 602 8333749</li>
+            <li>Cali, Colombia</li>
+          </ul>
+        </div>
+      
+        <div class="footer-bottom">
+          &copy; 2025 sebastianruiz. Todos los derechos reservados.
+        </div>
+      </footer>
+      
+    </main>
+
+    <!-- SCRIPT -->
+
+    <script src="js/app.js"></script>
+    <script src="js/categoria.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/nosotros.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuestra Colección</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .filtros {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .filtros button {
+      background: none;
+      border: 2px solid #d16ba5;
+      color: #d16ba5;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .filtros button.active,
+    .filtros button:hover {
+      background: #d16ba5;
+      color: white;
+    }
+
+    .categorias-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .tarjeta-categoria {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+      display: none;
+    }
+
+    .tarjeta-categoria.show {
+      display: block;
+    }
+
+    .imagen-producto {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .imagen-producto img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+
+    .img-front { opacity: 1; z-index: 1; }
+    .img-back { opacity: 0; z-index: 2; }
+
+    .tarjeta-categoria:hover .img-front { opacity: 0; }
+    .tarjeta-categoria:hover .img-back { opacity: 1; }
+
+    .tarjeta-categoria h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .tarjeta-categoria p {
+      font-weight: bold;
+      color: #d16ba5;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta-categoria button {
+      background: #d16ba5;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .tarjeta-categoria button:hover {
+      background: #b14b8b;
+    }
+  </style>
+</head>
+<body>
+
+<h2>NUESTRA COLECCIÓN</h2>
+
+<div class="filtros">
+  <button class="active" onclick="filtrarCategorias('all')">Todos</button>
+  <button onclick="filtrarCategorias('blusa')">Blusas</button>
+  <button onclick="filtrarCategorias('vestido')">Vestidos</button>
+  <button onclick="filtrarCategorias('falda')">Faldas</button>
+</div>
+
+<div class="categorias-grid">
+  <div class="tarjeta-categoria blusa show">
+    <div class="imagen-producto">
+      <img src="images/blusa1-front.jpg" class="img-front" />
+      <img src="images/blusa1-back.jpg" class="img-back" />
+    </div>
+    <h3>Blusa Estilo Romántico</h3>
+    <p>$89.900</p>
+    <button>Añadir al carrito</button>
+  </div>
+
+  <div class="tarjeta-categoria vestido show">
+    <div class="imagen-producto">
+      <img src="images/vestido1-front.jpg" class="img-front" />
+      <img src="images/vestido1-back.jpg" class="img-back" />
+    </div>
+    <h3>Vestido Lino Natural</h3>
+    <p>$129.900</p>
+    <button>Añadir al carrito</button>
+  </div>
+
+  <div class="tarjeta-categoria falda show">
+    <div class="imagen-producto">
+      <img src="images/falda1-front.jpg" class="img-front" />
+      <img src="images/falda1-back.jpg" class="img-back" />
+    </div>
+    <h3>Falda Midi Plisada</h3>
+    <p>$99.900</p>
+    <button>Añadir al carrito</button>
+  </div>
+
+  <div class="tarjeta-categoria blusa show">
+    <div class="imagen-producto">
+      <img src="images/blusa2-front.jpg" class="img-front" />
+      <img src="images/blusa2-back.jpg" class="img-back" />
+    </div>
+    <h3>Blusa Cuello Alto</h3>
+    <p>$75.000</p>
+    <button>Añadir al carrito</button>
+  </div>
+
+  <div class="tarjeta-categoria vestido show">
+    <div class="imagen-producto">
+      <img src="images/vestido2-front.jpg" class="img-front" />
+      <img src="images/vestido2-back.jpg" class="img-back" />
+    </div>
+    <h3>Vestido Escote V</h3>
+    <p>$149.000</p>
+    <button>Añadir al carrito</button>
+  </div>
+</div>
+
+<script>
+  
+</script>
+
+</body>
+</html>
