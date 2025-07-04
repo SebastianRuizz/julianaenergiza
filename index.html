@@ -1,174 +1,533 @@
 <!DOCTYPE html>
 <html lang="en-es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boutique Daniela Sandoval</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique Daniela Sandoval</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+</head>
 
 
-  <body>
-    <!-- BOTÓN HAMBURGUESA -->
-    <button id="hamburger" class="hamburger">
-      <i class="fa fa-bars"></i>
-    </button>
+<body>
+  <!-- BOTÓN HAMBURGUESA -->
+  <button id="hamburger" class="hamburger">
+    <i class="fa fa-bars"></i>
+  </button>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar" id="sidebar">
-      <div class="logo">
-        <img src="img/logo5.png" alt="Logo Daniela Sandoval" />
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="img/logo5.png" alt="Logo Daniela Sandoval" />
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="#inicio"><i class="fa fa-home"></i> Inicio</a>
+        </li>
+        <li>
+          <a href="#servicios"><i class="fa fa-scissors"></i> Servicios</a>
+        </li>
+        <li>
+          <a href="#categorias"><i class="fa fa-tags"></i> Ropa</a>
+        </li>
+        <li>
+          <a href="#galeria"><i class="fa fa-image"></i> Galería</a>
+        </li>
+        <li>
+          <a href="#nosotros"><i class="fa fa-users"></i> Nosotros</a>
+        </li>
+        <li>
+          <a href="#contacto"><i class="fa fa-envelope"></i> Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <button id="toggleDarkMode" class="modo-btn">
+        <i class="fa fa-moon"></i> Noche
+      </button>
+      <div class="redes">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/573104823432" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content" id="mainContent">
+    <!--  SECCIÓN 1: HERO CON VIDEO -->
+    <header class="hero-video" id="inicio">
+      <div class="video-container">
+        <video autoplay muted loop playsinline class="video-bg" lazy loading>
+          <source src="img/video.mp4" type="video/mp43" />
+
+        </video>
+        <div class="overlay"></div>
+        <div class="contenido-hero">
+          <h1>Estilo que inspira</h1>
+          <p>Moda femenina moderna para mujeres auténticas</p>
+          <a href="#categorias" class="btn-hero">Explorar colección</a>
+        </div>
+      </div>
+    </header>
+
+    <!--  SECCIÓN 2: SERVICIOS -->
+    <section id="servicios" class="seccion-servicios">
+      <div class="contenedor-servicios">
+        <div class="tarjeta-servicio">
+          <i class="fa fa-tshirt"></i>
+          <h3>Moda exclusiva</h3>
+          <p>Prendas únicas seleccionadas para resaltar tu estilo.</p>
+        </div>
+        <div class="tarjeta-servicio">
+          <i class="fa fa-user-friends"></i>
+          <h3>Asesoría personalizada</h3>
+          <p>Te ayudamos a elegir lo que mejor se adapta a ti.</p>
+        </div>
+        <div class="tarjeta-servicio">
+          <i class="fa fa-shipping-fast"></i>
+          <h3>Envíos rápidos</h3>
+          <p>Recibe tus prendas en la puerta de tu casa en tiempo récord.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--  SECCIÓN 3: CATEGORÍAS DE ROPA -->
+    <section class="coleccion">
+      <h2>NUESTRA COLECCIÓN</h2>
+      <div class="filtros">
+        <button class="active" onclick="mostrarCategoria('blusas')">Blusas</button>
+        <button onclick="mostrarCategoria('vestidos')">Vestidos</button>
+        <button onclick="mostrarCategoria('faldas')">Faldas</button>
+        <button onclick="mostrarCategoria('pantalones')">Pantalones</button>
+        <button onclick="mostrarCategoria('chaquetas')">Chaquetas</button>
+      </div>
+      <div id="blusas" class="categoria active">
+        <div class="slider">
+          <!-- Tarjetas 1 INICIO -->
+
+          <div class="producto" onclick="abrirModal('img/blusas1-front.jpg', 'img/blusas1-back.jpg')">
+  <img src="img/blusas1-front.jpg" alt="Blusa bonita">
+
+            <div class="producto-info">
+              <h3>Blusa 1</h3>
+              <p>Estilo único</p>
+              <div class="precio">$89000</div>
+              <button onclick="agregarAlCarrito('Blusa 1', 89000, 'img/blusas1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!-- Tarjetas 2 -->
+          <div class="producto" onclick="abrirModal(['img/blusas2-front.jpg','img/blusas2-back.jpg'])">
+            <img src="img/blusas2-front.jpg" alt="Blusa2">
+            <div class="producto-info">
+              <h3>Blusa 2</h3>
+              <p>Estilo único</p>
+              <div class="precio">$75000</div>
+              <button onclick="agregarAlCarrito('Blusa 2', 75000, 'img/blusas2-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!-- Tarjetas 3 -->
+          <div class="producto" onclick="abrirModal(['img/blusas3-front.jpg','img/blusas3-back.jpg'])">
+            <img src="img/blusas3-front.jpg" alt="Blusa1">
+            <div class="producto-info">
+              <h3>Blusa 3</h3>
+              <p>Estilo único</p>
+              <div class="precio">$49000</div>
+              <button onclick="agregarAlCarrito('Blusa 3', 49000, 'img/blusas3-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!-- Tarjetas 4 -->
+          <div class="producto" onclick="abrirModal(['img/blusas4-front.jpg','img/blusas4-back.jpg'])">
+            <img src="img/blusas4-front.jpg" alt="Blusa4">
+            <div class="producto-info">
+              <h3>Blusa 4</h3>
+              <p>Estilo único</p>
+              <div class="precio">$99000</div>
+              <button onclick="agregarAlCarrito('Blusa 4', 99000, 'img/blusas1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!-- Tarjetas 5 -->
+          <div class="producto" onclick="abrirModal(['img/blusas5-front.jpg','img/blusas5-back.jpg'])">
+            <img src="img/blusas5-front.jpg" alt="Blusa1">
+            <div class="producto-info">
+              <h3>Blusa 5</h3>
+              <p>Estilo único</p>
+              <div class="precio">$29000</div>
+              <button onclick="agregarAlCarrito('Blusa 5', 29000, 'img/blusas5-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!-- Tarjetas 6 -->
+          <div class="producto" onclick="abrirModal(['img/blusas6-front.jpg','img/blusas6-back.jpg'])">
+            <img src="img/blusas6-front.jpg" alt="Blusa6">
+            <div class="producto-info">
+              <h3>Blusa 6</h3>
+              <p>Estilo único</p>
+              <div class="precio">$9000</div>
+              <button onclick="agregarAlCarrito('Blusa 6', 9000, 'img/blusas6-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--FIN  DE BLUSAS-->
+        </div>
       </div>
 
-      <nav class="menu">
-        <ul>
-          <li>
-            <a href="#inicio"><i class="fa fa-home"></i> Inicio</a>
-          </li>
-          <li>
-            <a href="#servicios"><i class="fa fa-scissors"></i> Servicios</a>
-          </li>
-          <li>
-            <a href="#categorias"><i class="fa fa-tags"></i> Ropa</a>
-          </li>
-          <li>
-            <a href="#galeria"><i class="fa fa-image"></i> Galería</a>
-          </li>
-          <li>
-            <a href="#nosotros"><i class="fa fa-users"></i> Nosotros</a>
-          </li>
-          <li>
-            <a href="#contacto"><i class="fa fa-envelope"></i> Contacto</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="sidebar-bottom">
-        <button id="toggleDarkMode" class="modo-btn">
-          <i class="fa fa-moon"></i> Noche
-        </button>
-        <div class="redes">
-          <a href="https://instagram.com" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://facebook.com" target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="https://wa.me/573234815565" target="_blank"
-            ><i class="fab fa-whatsapp"></i
-          ></a>
+      <div id="vestidos" class="categoria">
+        <div class="slider">
+          <!--VESTIDOS INICIO 1-->
+          <div class="producto" onclick="abrirModal(['img/vestidos1-front.jpg','img/vestidos1-back.jpg'])">
+            <img src="img/vestidos1-front.jpg" alt="Vestido 1">
+            <div class="producto-info">
+              <h3>Vestido 1</h3>
+              <p>Elegancia total</p>
+              <div class="precio">$120000</div>
+              <button onclick="agregarAlCarrito('vestido 1', 120000, 'img/vestidos1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--VESTIDOS INICIO 2-->
+          <div class="producto" onclick="abrirModal(['img/vestidos2-front.jpg','img/vestidos2-back.jpg'])">
+            <img src="img/vestidos2-front.jpg" alt="Vestido 2">
+            <div class="producto-info">
+              <h3>Vestido 2</h3>
+              <p>Elegancia total</p>
+              <div class="precio">$85000</div>
+              <button onclick="agregarAlCarrito('vestido 2', 85000, 'img/vestidos2-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--VESTIDOS INICIO 3-->
+          <div class="producto" onclick="abrirModal(['img/vestidos3-front.jpg','img/vestidos3-back.jpg'])">
+            <img src="img/vestidos3-front.jpg" alt="Vestido 3">
+            <div class="producto-info">
+              <h3>Vestido 3</h3>
+              <p>Elegancia total</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('vestido 3', 50000, 'img/vestidos3-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--VESTIDOS INICIO 4-->
+          <div class="producto" onclick="abrirModal(['img/vestidos4-front.jpg','img/vestidos4-back.jpg'])">
+            <img src="img/vestidos4-front.jpg" alt="Vestido 4">
+            <div class="producto-info">
+              <h3>Vestido 4</h3>
+              <p>Elegancia total</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('vestido 4', 50000, 'img/vestidos4-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--VESTIDOS INICIO 5-->
+          <div class="producto" onclick="abrirModal(['img/vestidos5-front.jpg','img/vestidos5-back.jpg'])">
+            <img src="img/vestidos5-front.jpg" alt="Vestido 5">
+            <div class="producto-info">
+              <h3>Vestido 5</h3>
+              <p>Elegancia total</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('vestido 6', 50000, 'img/vestidos5-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--VESTIDOS INICIO 6-->
+          <div class="producto" onclick="abrirModal(['img/vestidos6-front.jpg','img/vestidos6-back.jpg'])">
+            <img src="img/vestidos6-front.jpg" alt="Vestido 6">
+            <div class="producto-info">
+              <h3>Vestido 6</h3>
+              <p>Elegancia total</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('vestido 6', 50000, 'img/vestidos6-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i> Añadir
+              </button>
+            </div>
+          </div>
+          <!--FIN DE VESTIDOS-->
         </div>
       </div>
-    </aside>
+      <div id="faldas" class="categoria">
+        <div class="slider">
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-content" id="mainContent">
-      <!--  SECCIÓN 1: HERO CON VIDEO -->
-      <header class="hero-video" id="inicio">
-        <div class="video-container">
-          <video autoplay muted loop playsinline class="video-bg">
-            <source src="img/video.mp4" type="video/mp4" />
-          
-          </video>
-          <div class="overlay"></div>
-          <div class="contenido-hero">
-            <h1>Estilo que inspira</h1>
-            <p>Moda femenina moderna para mujeres auténticas</p>
-            <a href="#categorias" class="btn-hero">Explorar colección</a>
+          <!-- FALDA INICIO 1-->
+          <div class="producto" onclick="abrirModal(['img/faldas1-front.jpg','img/faldas1-back.jpg'])">
+            <img src="img/faldas1-front.jpg" alt="Falda 1">
+            <div class="producto-info">
+              <h3>Falda 1</h3>
+              <p>Diseño fresco</p>
+              <div class="precio">$50000</div>
+             <button onclick="agregarAlCarrito('faldas 1', 50000, 'img/faldas1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
           </div>
+          <!-- FALDA INICIO 2-->
+          <div class="producto" onclick="abrirModal(['img/faldas2-front.jpg','img/faldas2-back.jpg'])">
+            <img src="img/faldas2-front.jpg" alt="Falda 2">
+            <div class="producto-info">
+              <h3>Falda 2</h3>
+              <p>Diseño fresco</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('faldas 2', 50000, 'img/faldas2-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- FALDA INICIO 3-->
+          <div class="producto" onclick="abrirModal(['img/faldas3-front.jpg','img/faldas3-back.jpg'])">
+            <img src="img/faldas3-front.jpg" alt="Falda 3">
+            <div class="producto-info">
+              <h3>Falda 3</h3>
+              <p>Diseño fresco</p>
+              <div class="precio">$50000</div>
+             <button onclick="agregarAlCarrito('faldas 3', 50000, 'img/faldas3-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- FALDA INICIO 4-->
+          <div class="producto" onclick="abrirModal(['img/faldas4-front.jpg','img/faldas4-back.jpg'])">
+            <img src="img/faldas4-front.jpg" alt="Falda 4">
+            <div class="producto-info">
+              <h3>Falda 4</h3>
+              <p>Diseño fresco</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('faldas 4', 50000, 'img/faldas4-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- FALDA INICIO 5-->
+          <div class="producto" onclick="abrirModal(['img/faldas5-front.jpg','img/faldas5-back.jpg'])">
+            <img src="img/faldas5-front.jpg" alt="Falda 5">
+            <div class="producto-info">
+              <h3>Falda 5</h3>
+              <p>Diseño fresco</p>
+              <div class="precio">$50000</div>
+             <button onclick="agregarAlCarrito('faldas 5', 50000, 'img/faldas5-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- FALDA INICIO 6-->
+          <div class="producto" onclick="abrirModal(['img/faldas6-front.jpg','img/faldas6-back.jpg'])">
+            <img src="img/faldas6-front.jpg" alt="Falda 6">
+            <div class="producto-info">
+              <h3>Falda 6</h3>
+              <p>Diseño fresco</p>
+              <div class="precio">$50000</div>
+               <button onclick="agregarAlCarrito('faldas 6', 50000, 'img/faldas1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- FALDA final-->
         </div>
-      </header>
+      </div>
+      <!-- PANTALONES INICIO-->
+      <div id="pantalones" class="categoria">
+        <div class="slider">
+          <!-- PANTALONES 1-->
+          <div class="producto" onclick="abrirModal(['img/pantalones1-front.jpg','img/pantalones1-back.jpg'])">
+            <img src="img/pantalones1-front.jpg" alt="Pantalón 1">
+            <div class="producto-info">
+              <h3>Pantalón 1</h3>
+              <p>Comodidad y estilo</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('pantalones 1', 50000, 'img/pantalones1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- PANTALONES 2-->
+          <div class="producto" onclick="abrirModal(['img/pantalones2-front.jpg','img/pantalones2-back.jpg'])">
+            <img src="img/pantalones2-front.jpg" alt="Pantalón 2">
+            <div class="producto-info">
+              <h3>Pantalón 2</h3>
+              <p>Comodidad y estilo</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Pantalones 2', 50000, 'img/pantalones2-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- PANTALONES 3-->
+          <div class="producto" onclick="abrirModal(['img/pantalones3-front.jpg','img/pantalones3-back.jpg'])">
+            <img src="img/pantalones3-front.jpg" alt="Pantalón 3">
+            <div class="producto-info">
+              <h3>Pantalón 3</h3>
+              <p>Comodidad y estilo</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('pantalones 3', 50000, 'img/pantalones-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- PANTALONES 4-->
+          <div class="producto" onclick="abrirModal(['img/pantalones4-front.jpg','img/pantalones4-back.jpg'])">
+            <img src="img/pantalones4-front.jpg" alt="Pantalón 4">
+            <div class="producto-info">
+              <h3>Pantalón 4</h3>
+              <p>Comodidad y estilo</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('pantalones 4', 50000, 'img/pantalones4-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- PANTALONES 5-->
+          <div class="producto" onclick="abrirModal(['img/pantalones5-front.jpg','img/pantalones5-back.jpg'])">
+            <img src="img/pantalones5-front.jpg" alt="Pantalón 5">
+            <div class="producto-info">
+              <h3>Pantalón 5</h3>
+              <p>Comodidad y estilo</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Pantalones 5', 50000, 'img/pantalones5-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- PANTALONES 6-->
+          <div class="producto" onclick="abrirModal(['img/pantalones6-front.jpg','img/pantalones6-back.jpg'])">
+            <img src="img/pantalones6-front.jpg" alt="Pantalón 6">
+            <div class="producto-info">
+              <h3>Pantalón 6</h3>
+              <p>Comodidad y estilo</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('pantalones 6', 50000, 'img/pantalones6-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <!-- PANTALONES FINAL-->
+        </div>
+      </div>
+      <!-- CHAQUETAS INICIO-->
+      <div id="chaquetas" class="categoria">
+        <div class="slider">
+            <!-- CHAQUETA 1-->
+          <div class="producto" onclick="abrirModal(['img/chaquetas1-front.jpg','img/chaquetas1-back.jpg'])">
+            <img src="img/chaquetas1-front.jpg" alt="Chaqueta 1">
+            <div class="producto-info">
+              <h3>Chaqueta 1</h3>
+              <p>Look moderno</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Chaqueta 1', 50000, 'img/chaquetas1-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+           <!-- CHAQUETA 2-->
+          <div class="producto" onclick="abrirModal(['img/chaquetas2-front.jpg','img/chaquetas2-back.jpg'])">
+            <img src="img/chaquetas2-front.jpg" alt="Chaqueta 1">
+            <div class="producto-info">
+              <h3>Chaqueta 2</h3>
+              <p>Look moderno</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Chaqueta 2', 50000, 'img/chaquetas2-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+           <!-- CHAQUETA 3-->
+          <div class="producto" onclick="abrirModal(['img/chaquetas3-front.jpg','img/chaquetas3-back.jpg'])">
+            <img src="img/chaquetas3-front.jpg" alt="Chaqueta 1">
+            <div class="producto-info">
+              <h3>Chaqueta 3</h3>
+              <p>Look moderno</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Chaqueta 3', 50000, 'img/chaquetas3-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+           <!-- CHAQUETA 4-->
+          <div class="producto" onclick="abrirModal(['img/chaquetas4-front.jpg','img/chaquetas4-back.jpg'])">
+            <img src="img/chaquetas4-front.jpg" alt="Chaqueta 1">
+            <div class="producto-info">
+              <h3>Chaqueta 1</h3>
+              <p>Look moderno</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Chaqueta 4', 50000, 'img/chaquetas4-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+           <!-- CHAQUETA 5-->
+          <div class="producto" onclick="abrirModal(['img/chaquetas5-front.jpg','img/chaquetas5-back.jpg'])">
+            <img src="img/chaquetas5-front.jpg" alt="Chaqueta 1">
+            <div class="producto-info">
+              <h3>Chaqueta 1</h3>
+              <p>Look moderno</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Chaqueta 5', 50000, 'img/chaquetas5-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+           <!-- CHAQUETA 6-->
+          <div class="tarjeta-producto" onclick="abrirModal(['img/chaquetas6-front.jpg','img/chaquetas6-back.jpg'])">
+            <img src="img/chaquetas6-front.jpg" alt="Chaqueta 1">
+            <div class="producto-info">
+              <h3>Chaqueta 6</h3>
+              <p>Look moderno</p>
+              <div class="precio">$50000</div>
+              <button onclick="agregarAlCarrito('Chaqueta 6', 50000, 'img/chaquetas6-front.jpg', 'M')">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+     
+        </div>
+      </div>
+       <!-- Modal-->
+ <div id="modal-galeria" class="modal-galeria">
+  <div class="modal-contenido" onclick="event.stopPropagation()">
+    <span class="cerrar-modal" onclick="cerrarModal()">×</span>
+    <img id="modal-img" src="" alt="Vista ampliada">
+    <div class="botones-navegacion">
+      <button onclick="cambiarImagen(-1)">‹</button>
+      <button onclick="cambiarImagen(1)">›</button>
+    </div>
+  </div>
+</div>
 
-      <!--  SECCIÓN 2: SERVICIOS -->
-      <section id="servicios" class="seccion-servicios">
-        <div class="contenedor-servicios">
-          <div class="tarjeta-servicio">
-            <i class="fa fa-tshirt"></i>
-            <h3>Moda exclusiva</h3>
-            <p>Prendas únicas seleccionadas para resaltar tu estilo.</p>
-          </div>
-          <div class="tarjeta-servicio">
-            <i class="fa fa-user-friends"></i>
-            <h3>Asesoría personalizada</h3>
-            <p>Te ayudamos a elegir lo que mejor se adapta a ti.</p>
-          </div>
-          <div class="tarjeta-servicio">
-            <i class="fa fa-shipping-fast"></i>
-            <h3>Envíos rápidos</h3>
-            <p>Recibe tus prendas en la puerta de tu casa en tiempo récord.</p>
-          </div>
-        </div>
-      </section>
+      <!-- CARRITO VERSION ESTILO APP DE MODA -->
+      <!-- BOTÓN FLOTANTE DEL CARRITO -->
+      <div class="icono-carrito" onclick="toggleCarrito()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="contador-carrito">0</span>
+      </div>
 
-      <!--  SECCIÓN 3: CATEGORÍAS DE ROPA -->
-      <section id="categorias" class="seccion-categorias">
-        <h2>NUESTRA COLECCIÓN</h2>
+      <!-- RESUMEN DEL CARRITO -->
+      <div id="resumen-carrito" class="resumen-carrito" style="display: none;">
+        <h3>Mi carrito</h3>
+        <div id="carrito-items"></div>
+        <div class="carrito-total">
+          Total: $<span id="carrito-total">0</span>
+        </div>
+        <button onclick="redirigirPago()" class="btn-pago">Continuar al pago</button>
+      </div>
 
-        <div class="filtros">
-          <button class="active" onclick="filtrarCategorias('all')">Todos</button>
-          <button onclick="filtrarCategorias('blusa')">Blusas</button>
-          <button onclick="filtrarCategorias('vestido')">Vestidos</button>
-          <button onclick="filtrarCategorias('falda')">Faldas</button>
-        </div>
-        
-        <div class="categorias-grid">
-          <div class="tarjeta-categoria blusa show">
-            <div class="imagen-producto">
-              <img src="img/galeria1.jpeg" class="img-front" />
-              <img src="img/galeria2.jpeg" class="img-back" />
-            </div>
-            <h3>Blusa Estilo Romántico</h3>
-            <p>$89.900</p>
-            <button>Añadir al carrito</button>
-          </div>
-        
-          <div class="tarjeta-categoria vestido show">
-            <div class="imagen-producto">
-              <img src="img/galeria3.jpeg" class="img-front" />
-              <img src="img/galeria4.jpeg" class="img-back" />
-            </div>
-            <h3>Vestido Lino Natural</h3>
-            <p>$129.900</p>
-            <button>Añadir al carrito</button>
-          </div>
-        
-          <div class="tarjeta-categoria falda show">
-            <div class="imagen-producto">
-              <img src="images/falda1-front.jpg" class="img-front" />
-              <img src="images/falda1-back.jpg" class="img-back" />
-            </div>
-            <h3>Falda Midi Plisada</h3>
-            <p>$99.900</p>
-            <button>Añadir al carrito</button>
-          </div>
-        
-          <div class="tarjeta-categoria blusa show">
-            <div class="imagen-producto">
-              <img src="images/blusa2-front.jpg" class="img-front" />
-              <img src="images/blusa2-back.jpg" class="img-back" />
-            </div>
-            <h3>Blusa Cuello Alto</h3>
-            <p>$75.000</p>
-            <button>Añadir al carrito</button>
-          </div>
-        
-          <div class="tarjeta-categoria vestido show">
-            <div class="imagen-producto">
-              <img src="images/vestido2-front.jpg" class="img-front" />
-              <img src="images/vestido2-back.jpg" class="img-back" />
-            </div>
-            <h3>Vestido Escote V</h3>
-            <p>$149.000</p>
-            <button>Añadir al carrito</button>
-          </div>
-        </div>
-      </section>
 
       <!--  SECCIÓN 4: GALERÍA COLLAGE -->
       <section id="galeria" class="galeria-slider">
@@ -199,7 +558,7 @@
         </div>
       </section>
 
-     
+
       <!-- ✅ SECCIÓN 5: NOSOTROS -->
       <section id="nosotros" class="seccion-nosotros">
         <div class="contenedor-nosotros">
@@ -218,11 +577,7 @@
           </div>
 
           <div class="imagen-nosotros slider-nosotros">
-            <img
-              src="img/galeria1.jpeg"
-              alt="Nosotras 1"
-              class="slide active"
-            />
+            <img src="img/galeria1.jpeg" alt="Nosotras 1" class="slide active" />
             <img src="img/galeria2.jpeg" alt="Nosotras 2" class="slide" />
             <img src="img/galeria3.jpeg " alt="Nosotras 3" class="slide" />
           </div>
@@ -232,7 +587,7 @@
       <!-- ✅ SECCIÓN 6: CONTACTO -->
       <section class="seccion-contacto-bg">
         <div class="contenedor-contacto-bg">
-          
+
           <!-- Formulario -->
           <form class="formulario-contacto-bg">
             <h2>Escríbenos para una mejor asesoría</h2>
@@ -241,16 +596,16 @@
             <textarea rows="4" placeholder="Tu mensaje..." required></textarea>
             <button type="submit">Enviar</button>
           </form>
-      
+
           <!-- Frase motivacional e imagen -->
           <div class="texto-contacto-info">
             <h3>Conecta con tu estilo</h3>
             <p>"Tu mejor versión empieza con la actitud y un buen outfit"</p>
             <img src="images/contacto-chic.jpg" alt="Imagen inspiracional" />
           </div>
-      
+
         </div>
-      
+
         <!-- Redes sociales -->
         <div class="redes-contacto">
           <a href="#" class="red fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -270,7 +625,7 @@
             <a href="#"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
-      
+
         <div class="footer-col">
           <h4>Enlaces</h4>
           <ul class="footer-links">
@@ -280,7 +635,7 @@
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-      
+
         <div class="footer-col">
           <h4>Contáctanos</h4>
           <ul class="footer-contact">
@@ -289,19 +644,22 @@
             <li>Cali, Colombia</li>
           </ul>
         </div>
-      
+
         <div class="footer-bottom">
           &copy; 2025 sebastianruiz. Todos los derechos reservados.
         </div>
       </footer>
-      
-    </main>
 
-    <!-- SCRIPT -->
+  </main>
 
-    <script src="js/app.js"></script>
-    <script src="js/categoria.js"></script>
-    <script src="js/galeria.js"></script>
-    <script src="js/nosotros.js"></script>
-  </body>
+  <!-- SCRIPT -->
+
+  <script src="js/app.js"></script>
+  <script src="js/categoria.js"></script>
+  <script src="js/galeria.js"></script>
+  <script src="js/nosotros.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/boton.js"></script>
+</body>
+
 </html>
