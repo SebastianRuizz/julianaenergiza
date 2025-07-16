@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -36,7 +37,7 @@
           <a href="#categorias"><i class="fa fa-tags"></i> Ropa</a>
         </li>
         <li>
-          <a href="#galeria"><i class="fa fa-image"></i> Galería</a>
+          <a href="#galeria-collage"><i class="fa fa-image"></i> Galería</a>
         </li>
         <li>
           <a href="#nosotros"><i class="fa fa-users"></i> Nosotros</a>
@@ -65,14 +66,14 @@
     <header class="hero-video" id="inicio">
       <div class="video-container">
         <video autoplay muted loop playsinline class="video-bg" lazy loading>
-          <source src="img/video.mp4" type="video/mp43" />
+          <source src="/img/video.mp4" type="video/mp4" />
 
         </video>
         <div class="overlay"></div>
         <div class="contenido-hero">
           <h1>Estilo que inspira</h1>
           <p>Moda femenina moderna para mujeres auténticas</p>
-          <a href="#categorias" class="btn-hero">Explorar colección</a>
+          <a href="#coleccion" class="btn-hero">Explorar colección</a>
         </div>
       </div>
     </header>
@@ -99,7 +100,7 @@
     </section>
 
     <!--  SECCIÓN 3: CATEGORÍAS DE ROPA -->
-    <section class="coleccion">
+    <section class="coleccion" id="coleccion">
       <h2>NUESTRA COLECCIÓN</h2>
       <div class="filtros">
         <button class="active" onclick="mostrarCategoria('blusas')">Blusas</button>
@@ -112,8 +113,9 @@
         <div class="slider">
           <!-- Tarjetas 1 INICIO -->
 
-          <div class="producto" onclick="abrirModal('img/blusas1-front.jpg', 'img/blusas1-back.jpg')">
-  <img src="img/blusas1-front.jpg" alt="Blusa bonita">
+          <div class="producto">
+            <img src="img/blusas1-front.jpg" alt="Blusa bonita"
+              onclick="abrirModal('img/blusas1-front.jpg', 'img/blusas1-back.jpg')">
 
             <div class="producto-info">
               <h3>Blusa 1</h3>
@@ -125,8 +127,9 @@
             </div>
           </div>
           <!-- Tarjetas 2 -->
-          <div class="producto" onclick="abrirModal(['img/blusas2-front.jpg','img/blusas2-back.jpg'])">
-            <img src="img/blusas2-front.jpg" alt="Blusa2">
+          <div class="producto">
+            <img src="img/blusas2-front.jpg" alt="Blusa2"
+              onclick="abrirModal(['img/blusas2-front.jpg','img/blusas2-back.jpg'])">
             <div class="producto-info">
               <h3>Blusa 2</h3>
               <p>Estilo único</p>
@@ -137,8 +140,9 @@
             </div>
           </div>
           <!-- Tarjetas 3 -->
-          <div class="producto" onclick="abrirModal(['img/blusas3-front.jpg','img/blusas3-back.jpg'])">
-            <img src="img/blusas3-front.jpg" alt="Blusa1">
+          <div class="producto">
+            <img src="img/blusas3-front.jpg" alt="Blusa1"
+              onclick="abrirModal(['img/blusas3-front.jpg','img/blusas3-back.jpg'])">
             <div class="producto-info">
               <h3>Blusa 3</h3>
               <p>Estilo único</p>
@@ -149,8 +153,9 @@
             </div>
           </div>
           <!-- Tarjetas 4 -->
-          <div class="producto" onclick="abrirModal(['img/blusas4-front.jpg','img/blusas4-back.jpg'])">
-            <img src="img/blusas4-front.jpg" alt="Blusa4">
+          <div class="producto">
+            <img src="img/blusas4-front.jpg" alt="Blusa4"
+              onclick="abrirModal(['img/blusas4-front.jpg','img/blusas4-back.jpg'])">
             <div class="producto-info">
               <h3>Blusa 4</h3>
               <p>Estilo único</p>
@@ -161,8 +166,9 @@
             </div>
           </div>
           <!-- Tarjetas 5 -->
-          <div class="producto" onclick="abrirModal(['img/blusas5-front.jpg','img/blusas5-back.jpg'])">
-            <img src="img/blusas5-front.jpg" alt="Blusa1">
+          <div class="producto">
+            <img src="img/blusas5-front.jpg" alt="Blusa1"
+              onclick="abrirModal(['img/blusas5-front.jpg','img/blusas5-back.jpg'])">
             <div class="producto-info">
               <h3>Blusa 5</h3>
               <p>Estilo único</p>
@@ -173,8 +179,9 @@
             </div>
           </div>
           <!-- Tarjetas 6 -->
-          <div class="producto" onclick="abrirModal(['img/blusas6-front.jpg','img/blusas6-back.jpg'])">
-            <img src="img/blusas6-front.jpg" alt="Blusa6">
+          <div class="producto">
+            <img src="img/blusas6-front.jpg" alt="Blusa6"
+              onclick="abrirModal(['img/blusas6-front.jpg','img/blusas6-back.jpg'])">
             <div class="producto-info">
               <h3>Blusa 6</h3>
               <p>Estilo único</p>
@@ -191,8 +198,9 @@
       <div id="vestidos" class="categoria">
         <div class="slider">
           <!--VESTIDOS INICIO 1-->
-          <div class="producto" onclick="abrirModal(['img/vestidos1-front.jpg','img/vestidos1-back.jpg'])">
-            <img src="img/vestidos1-front.jpg" alt="Vestido 1">
+          <div class="producto">
+            <img src="img/vestidos1-front.jpg" alt="Vestido 1"
+              onclick="abrirModal(['img/vestidos1-front.jpg','img/vestidos1-back.jpg'])">
             <div class="producto-info">
               <h3>Vestido 1</h3>
               <p>Elegancia total</p>
@@ -203,8 +211,9 @@
             </div>
           </div>
           <!--VESTIDOS INICIO 2-->
-          <div class="producto" onclick="abrirModal(['img/vestidos2-front.jpg','img/vestidos2-back.jpg'])">
-            <img src="img/vestidos2-front.jpg" alt="Vestido 2">
+          <div class="producto">
+            <img src="img/vestidos2-front.jpg" alt="Vestido 2"
+              onclick="abrirModal(['img/vestidos2-front.jpg','img/vestidos2-back.jpg'])">
             <div class="producto-info">
               <h3>Vestido 2</h3>
               <p>Elegancia total</p>
@@ -215,8 +224,9 @@
             </div>
           </div>
           <!--VESTIDOS INICIO 3-->
-          <div class="producto" onclick="abrirModal(['img/vestidos3-front.jpg','img/vestidos3-back.jpg'])">
-            <img src="img/vestidos3-front.jpg" alt="Vestido 3">
+          <div class="producto">
+            <img src="img/vestidos3-front.jpg" alt="Vestido 3"
+              onclick="abrirModal(['img/vestidos3-front.jpg','img/vestidos3-back.jpg'])">
             <div class="producto-info">
               <h3>Vestido 3</h3>
               <p>Elegancia total</p>
@@ -227,8 +237,9 @@
             </div>
           </div>
           <!--VESTIDOS INICIO 4-->
-          <div class="producto" onclick="abrirModal(['img/vestidos4-front.jpg','img/vestidos4-back.jpg'])">
-            <img src="img/vestidos4-front.jpg" alt="Vestido 4">
+          <div class="producto">
+            <img src="img/vestidos4-front.jpg" alt="Vestido 4"
+              onclick="abrirModal(['img/vestidos4-front.jpg','img/vestidos4-back.jpg'])">
             <div class="producto-info">
               <h3>Vestido 4</h3>
               <p>Elegancia total</p>
@@ -239,8 +250,9 @@
             </div>
           </div>
           <!--VESTIDOS INICIO 5-->
-          <div class="producto" onclick="abrirModal(['img/vestidos5-front.jpg','img/vestidos5-back.jpg'])">
-            <img src="img/vestidos5-front.jpg" alt="Vestido 5">
+          <div class="producto">
+            <img src="img/vestidos5-front.jpg" alt="Vestido 5"
+              onclick="abrirModal(['img/vestidos5-front.jpg','img/vestidos5-back.jpg'])">
             <div class="producto-info">
               <h3>Vestido 5</h3>
               <p>Elegancia total</p>
@@ -251,8 +263,9 @@
             </div>
           </div>
           <!--VESTIDOS INICIO 6-->
-          <div class="producto" onclick="abrirModal(['img/vestidos6-front.jpg','img/vestidos6-back.jpg'])">
-            <img src="img/vestidos6-front.jpg" alt="Vestido 6">
+          <div class="producto">
+            <img src="img/vestidos6-front.jpg" alt="Vestido 6"
+              onclick="abrirModal(['img/vestidos6-front.jpg','img/vestidos6-back.jpg'])">
             <div class="producto-info">
               <h3>Vestido 6</h3>
               <p>Elegancia total</p>
@@ -269,20 +282,22 @@
         <div class="slider">
 
           <!-- FALDA INICIO 1-->
-          <div class="producto" onclick="abrirModal(['img/faldas1-front.jpg','img/faldas1-back.jpg'])">
-            <img src="img/faldas1-front.jpg" alt="Falda 1">
+          <div class="producto">
+            <img src="img/faldas1-front.jpg" alt="Falda 1"
+              onclick="abrirModal(['img/faldas1-front.jpg','img/faldas1-back.jpg'])">
             <div class="producto-info">
               <h3>Falda 1</h3>
               <p>Diseño fresco</p>
               <div class="precio">$50000</div>
-             <button onclick="agregarAlCarrito('faldas 1', 50000, 'img/faldas1-front.jpg', 'M')">
+              <button onclick="agregarAlCarrito('faldas 1', 50000, 'img/faldas1-front.jpg', 'M')">
                 <i class="fas fa-shopping-cart"></i>
               </button>
             </div>
           </div>
           <!-- FALDA INICIO 2-->
-          <div class="producto" onclick="abrirModal(['img/faldas2-front.jpg','img/faldas2-back.jpg'])">
-            <img src="img/faldas2-front.jpg" alt="Falda 2">
+          <div class="producto">
+            <img src="img/faldas2-front.jpg" alt="Falda 2"
+              onclick="abrirModal(['img/faldas2-front.jpg','img/faldas2-back.jpg'])">
             <div class="producto-info">
               <h3>Falda 2</h3>
               <p>Diseño fresco</p>
@@ -293,20 +308,22 @@
             </div>
           </div>
           <!-- FALDA INICIO 3-->
-          <div class="producto" onclick="abrirModal(['img/faldas3-front.jpg','img/faldas3-back.jpg'])">
-            <img src="img/faldas3-front.jpg" alt="Falda 3">
+          <div class="producto">
+            <img src="img/faldas3-front.jpg" alt="Falda 3"
+              onclick="abrirModal(['img/faldas3-front.jpg','img/faldas3-back.jpg'])">
             <div class="producto-info">
               <h3>Falda 3</h3>
               <p>Diseño fresco</p>
               <div class="precio">$50000</div>
-             <button onclick="agregarAlCarrito('faldas 3', 50000, 'img/faldas3-front.jpg', 'M')">
+              <button onclick="agregarAlCarrito('faldas 3', 50000, 'img/faldas3-front.jpg', 'M')">
                 <i class="fas fa-shopping-cart"></i>
               </button>
             </div>
           </div>
           <!-- FALDA INICIO 4-->
-          <div class="producto" onclick="abrirModal(['img/faldas4-front.jpg','img/faldas4-back.jpg'])">
-            <img src="img/faldas4-front.jpg" alt="Falda 4">
+          <div class="producto">
+            <img src="img/faldas4-front.jpg" alt="Falda 4"
+              onclick="abrirModal(['img/faldas4-front.jpg','img/faldas4-back.jpg'])">
             <div class="producto-info">
               <h3>Falda 4</h3>
               <p>Diseño fresco</p>
@@ -317,25 +334,27 @@
             </div>
           </div>
           <!-- FALDA INICIO 5-->
-          <div class="producto" onclick="abrirModal(['img/faldas5-front.jpg','img/faldas5-back.jpg'])">
-            <img src="img/faldas5-front.jpg" alt="Falda 5">
+          <div class="producto">
+            <img src="img/faldas5-front.jpg" alt="Falda 5"
+              onclick="abrirModal(['img/faldas5-front.jpg','img/faldas5-back.jpg'])">
             <div class="producto-info">
               <h3>Falda 5</h3>
               <p>Diseño fresco</p>
               <div class="precio">$50000</div>
-             <button onclick="agregarAlCarrito('faldas 5', 50000, 'img/faldas5-front.jpg', 'M')">
+              <button onclick="agregarAlCarrito('faldas 5', 50000, 'img/faldas5-front.jpg', 'M')">
                 <i class="fas fa-shopping-cart"></i>
               </button>
             </div>
           </div>
           <!-- FALDA INICIO 6-->
-          <div class="producto" onclick="abrirModal(['img/faldas6-front.jpg','img/faldas6-back.jpg'])">
-            <img src="img/faldas6-front.jpg" alt="Falda 6">
+          <div class="producto">
+            <img src="img/faldas6-front.jpg" alt="Falda 6"
+              onclick="abrirModal(['img/faldas6-front.jpg','img/faldas6-back.jpg'])">
             <div class="producto-info">
               <h3>Falda 6</h3>
               <p>Diseño fresco</p>
               <div class="precio">$50000</div>
-               <button onclick="agregarAlCarrito('faldas 6', 50000, 'img/faldas1-front.jpg', 'M')">
+              <button onclick="agregarAlCarrito('faldas 6', 50000, 'img/faldas1-front.jpg', 'M')">
                 <i class="fas fa-shopping-cart"></i>
               </button>
             </div>
@@ -347,8 +366,9 @@
       <div id="pantalones" class="categoria">
         <div class="slider">
           <!-- PANTALONES 1-->
-          <div class="producto" onclick="abrirModal(['img/pantalones1-front.jpg','img/pantalones1-back.jpg'])">
-            <img src="img/pantalones1-front.jpg" alt="Pantalón 1">
+          <div class="producto">
+            <img src="img/pantalones1-front.jpg" alt="Pantalón 1"
+              onclick="abrirModal(['img/pantalones1-front.jpg','img/pantalones1-back.jpg'])">
             <div class="producto-info">
               <h3>Pantalón 1</h3>
               <p>Comodidad y estilo</p>
@@ -359,8 +379,9 @@
             </div>
           </div>
           <!-- PANTALONES 2-->
-          <div class="producto" onclick="abrirModal(['img/pantalones2-front.jpg','img/pantalones2-back.jpg'])">
-            <img src="img/pantalones2-front.jpg" alt="Pantalón 2">
+          <div class="producto">
+            <img src="img/pantalones2-front.jpg" alt="Pantalón 2"
+              onclick="abrirModal(['img/pantalones2-front.jpg','img/pantalones2-back.jpg'])">
             <div class="producto-info">
               <h3>Pantalón 2</h3>
               <p>Comodidad y estilo</p>
@@ -371,8 +392,9 @@
             </div>
           </div>
           <!-- PANTALONES 3-->
-          <div class="producto" onclick="abrirModal(['img/pantalones3-front.jpg','img/pantalones3-back.jpg'])">
-            <img src="img/pantalones3-front.jpg" alt="Pantalón 3">
+          <div class="producto">
+            <img src="img/pantalones3-front.jpg" alt="Pantalón 3"
+              onclick="abrirModal(['img/pantalones3-front.jpg','img/pantalones3-back.jpg'])">
             <div class="producto-info">
               <h3>Pantalón 3</h3>
               <p>Comodidad y estilo</p>
@@ -383,8 +405,9 @@
             </div>
           </div>
           <!-- PANTALONES 4-->
-          <div class="producto" onclick="abrirModal(['img/pantalones4-front.jpg','img/pantalones4-back.jpg'])">
-            <img src="img/pantalones4-front.jpg" alt="Pantalón 4">
+          <div class="producto">
+            <img src="img/pantalones4-front.jpg" alt="Pantalón 4"
+              onclick="abrirModal(['img/pantalones4-front.jpg','img/pantalones4-back.jpg'])">
             <div class="producto-info">
               <h3>Pantalón 4</h3>
               <p>Comodidad y estilo</p>
@@ -395,8 +418,9 @@
             </div>
           </div>
           <!-- PANTALONES 5-->
-          <div class="producto" onclick="abrirModal(['img/pantalones5-front.jpg','img/pantalones5-back.jpg'])">
-            <img src="img/pantalones5-front.jpg" alt="Pantalón 5">
+          <div class="producto">
+            <img src="img/pantalones5-front.jpg" alt="Pantalón 5"
+              onclick="abrirModal(['img/pantalones5-front.jpg','img/pantalones5-back.jpg'])">
             <div class="producto-info">
               <h3>Pantalón 5</h3>
               <p>Comodidad y estilo</p>
@@ -407,8 +431,9 @@
             </div>
           </div>
           <!-- PANTALONES 6-->
-          <div class="producto" onclick="abrirModal(['img/pantalones6-front.jpg','img/pantalones6-back.jpg'])">
-            <img src="img/pantalones6-front.jpg" alt="Pantalón 6">
+          <div class="producto">
+            <img src="img/pantalones6-front.jpg" alt="Pantalón 6"
+              onclick="abrirModal(['img/pantalones6-front.jpg','img/pantalones6-back.jpg'])">
             <div class="producto-info">
               <h3>Pantalón 6</h3>
               <p>Comodidad y estilo</p>
@@ -424,9 +449,10 @@
       <!-- CHAQUETAS INICIO-->
       <div id="chaquetas" class="categoria">
         <div class="slider">
-            <!-- CHAQUETA 1-->
-          <div class="producto" onclick="abrirModal(['img/chaquetas1-front.jpg','img/chaquetas1-back.jpg'])">
-            <img src="img/chaquetas1-front.jpg" alt="Chaqueta 1">
+          <!-- CHAQUETA 1-->
+          <div class="producto">
+            <img src="img/chaquetas1-front.jpg" alt="Chaqueta 1"
+              onclick="abrirModal(['img/chaquetas1-front.jpg','img/chaquetas1-back.jpg'])">
             <div class="producto-info">
               <h3>Chaqueta 1</h3>
               <p>Look moderno</p>
@@ -436,9 +462,10 @@
               </button>
             </div>
           </div>
-           <!-- CHAQUETA 2-->
-          <div class="producto" onclick="abrirModal(['img/chaquetas2-front.jpg','img/chaquetas2-back.jpg'])">
-            <img src="img/chaquetas2-front.jpg" alt="Chaqueta 1">
+          <!-- CHAQUETA 2-->
+          <div class="producto">
+            <img src="img/chaquetas2-front.jpg" alt="Chaqueta 1"
+              onclick="abrirModal(['img/chaquetas2-front.jpg','img/chaquetas2-back.jpg'])">
             <div class="producto-info">
               <h3>Chaqueta 2</h3>
               <p>Look moderno</p>
@@ -448,9 +475,10 @@
               </button>
             </div>
           </div>
-           <!-- CHAQUETA 3-->
-          <div class="producto" onclick="abrirModal(['img/chaquetas3-front.jpg','img/chaquetas3-back.jpg'])">
-            <img src="img/chaquetas3-front.jpg" alt="Chaqueta 1">
+          <!-- CHAQUETA 3-->
+          <div class="producto">
+            <img src="img/chaquetas3-front.jpg" alt="Chaqueta 1"
+              onclick="abrirModal(['img/chaquetas3-front.jpg','img/chaquetas3-back.jpg'])">
             <div class="producto-info">
               <h3>Chaqueta 3</h3>
               <p>Look moderno</p>
@@ -460,9 +488,10 @@
               </button>
             </div>
           </div>
-           <!-- CHAQUETA 4-->
-          <div class="producto" onclick="abrirModal(['img/chaquetas4-front.jpg','img/chaquetas4-back.jpg'])">
-            <img src="img/chaquetas4-front.jpg" alt="Chaqueta 1">
+          <!-- CHAQUETA 4-->
+          <div class="producto">
+            <img src="img/chaquetas4-front.jpg" alt="Chaqueta 1"
+              onclick="abrirModal(['img/chaquetas4-front.jpg','img/chaquetas4-back.jpg'])">
             <div class="producto-info">
               <h3>Chaqueta 1</h3>
               <p>Look moderno</p>
@@ -472,9 +501,10 @@
               </button>
             </div>
           </div>
-           <!-- CHAQUETA 5-->
-          <div class="producto" onclick="abrirModal(['img/chaquetas5-front.jpg','img/chaquetas5-back.jpg'])">
-            <img src="img/chaquetas5-front.jpg" alt="Chaqueta 1">
+          <!-- CHAQUETA 5-->
+          <div class="producto">
+            <img src="img/chaquetas5-front.jpg" alt="Chaqueta 1"
+              onclick="abrirModal(['img/chaquetas5-front.jpg','img/chaquetas5-back.jpg'])">
             <div class="producto-info">
               <h3>Chaqueta 1</h3>
               <p>Look moderno</p>
@@ -484,9 +514,10 @@
               </button>
             </div>
           </div>
-           <!-- CHAQUETA 6-->
-          <div class="tarjeta-producto" onclick="abrirModal(['img/chaquetas6-front.jpg','img/chaquetas6-back.jpg'])">
-            <img src="img/chaquetas6-front.jpg" alt="Chaqueta 1">
+          <!-- CHAQUETA 6-->
+          <div class="tarjeta-producto">
+            <img src="img/chaquetas6-front.jpg" alt="Chaqueta 1"
+              onclick="abrirModal(['img/chaquetas6-front.jpg','img/chaquetas6-back.jpg'])">
             <div class="producto-info">
               <h3>Chaqueta 6</h3>
               <p>Look moderno</p>
@@ -496,20 +527,20 @@
               </button>
             </div>
           </div>
-     
+
         </div>
       </div>
-       <!-- Modal-->
- <div id="modal-galeria" class="modal-galeria">
-  <div class="modal-contenido" onclick="event.stopPropagation()">
-    <span class="cerrar-modal" onclick="cerrarModal()">×</span>
-    <img id="modal-img" src="" alt="Vista ampliada">
-    <div class="botones-navegacion">
-      <button onclick="cambiarImagen(-1)">‹</button>
-      <button onclick="cambiarImagen(1)">›</button>
-    </div>
-  </div>
-</div>
+      <!-- Modal-->
+      <div id="modal-galeria" class="modal-galeria">
+        <div class="modal-contenido" onclick="event.stopPropagation()">
+          <span class="cerrar-modal" onclick="cerrarModal()">×</span>
+          <img id="modal-img" src="" alt="Vista ampliada">
+          <div class="botones-navegacion">
+            <button onclick="cambiarImagen(-1)">‹</button>
+            <button onclick="cambiarImagen(1)">›</button>
+          </div>
+        </div>
+      </div>
 
       <!-- CARRITO VERSION ESTILO APP DE MODA -->
       <!-- BOTÓN FLOTANTE DEL CARRITO -->
@@ -525,130 +556,149 @@
         <div class="carrito-total">
           Total: $<span id="carrito-total">0</span>
         </div>
-        <button onclick="redirigirPago()" class="btn-pago">Continuar al pago</button>
+        <button onclick="redirigirPago()" class="btn-pago">Continuar al pago</button target="_blank">
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- ✅ SECCIÓN 4: NOSOTROS -->
+    <section id="nosotros" class="seccion-nosotros">
+      <div class="contenedor-nosotros">
+        <div class="texto-nosotros">
+          <h2>Sobre Daniela Sandoval Boutique</h2>
+          <p>
+            Nuestra boutique nace de la pasión por la moda femenina, el
+            detalle y la elegancia. Nos dedicamos a vestir a mujeres
+            auténticas con estilo moderno, delicado y poderoso.
+          </p>
+          <p>
+            Con más de 5 años de experiencia en el mundo de la moda, hemos
+            creado colecciones que inspiran, empoderan y reflejan belleza en
+            cada costura.
+          </p>
+        </div>
+
+        <div class="imagen-nosotros slider-nosotros">
+          <img src="img/blusas1-front.jpg" alt="Nosotras 1" class="slide active" />
+          <img src="img/logo3.png" alt="Nosotras 2" class="slide" />
+          <img src="img/bg-servicios.jpg " alt="Nosotras 3" class="slide" />
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN 5: GALERÍA COLLAGE -->
+    <section class="galeria-collage" id="galeria-collage">
+      <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide activo">
+          <img src="img/blusas1-front.jpg" alt="Colección urbana">
+          <div class="texto-slide">
+            <h3>Estilo Urbano</h3>
+            <p>Comodidad y actitud para todos tus días.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 (video) -->
+        <div class="slide">
+          <video src="videos/lookbook1.mp4" autoplay muted loop playsinline></video>
+          <div class="texto-slide">
+            <h3>Movimiento & Moda</h3>
+            <p>El lookbook que evoluciona contigo.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="img/DSC_8293.jpg" alt="Elegancia casual">
+          <div class="texto-slide">
+            <h3>Chic Natural</h3>
+            <p>Menos es más, y más estilizado.</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 (video) -->
+        <div class="slide">
+          <video src="videos/editorial1.mp4" autoplay muted loop playsinline></video>
+          <div class="texto-slide">
+            <h3>Detalles que importan</h3>
+            <p>Moda con propósito, vista desde todos los ángulos.</p>
+          </div>
+        </div>
+
+        <!-- Controles opcionales -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- ✅ SECCIÓN 6: CONTACTO -->
+    <section class="seccion-contacto-bg">
+      <div class="contenedor-contacto-bg">
+
+        <!-- Formulario -->
+        <form class="formulario-contacto-bg">
+          <h2>Escríbenos para una mejor asesoría</h2>
+          <input type="text" placeholder="Tu nombre" required />
+          <input type="email" placeholder="Tu correo" required />
+          <textarea rows="4" placeholder="Tu mensaje..." required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Frase motivacional e imagen -->
+        <div class="texto-contacto-info">
+          <h3>Conecta con tu estilo</h3>
+          <p>"Tu mejor versión empieza con la actitud y un buen outfit"</p>
+          <img src="img/logo4.png" alt="Imagen inspiracional" />
+        </div>
+
       </div>
 
+      <!-- Redes sociales -->
+      <div class="redes-contacto">
+        <a href="#" class="red fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/573002003000" class="red wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="red ig" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </section>
 
-      <!--  SECCIÓN 4: GALERÍA COLLAGE -->
-      <section id="galeria" class="galeria-slider">
-        <div class="slide active" style="background-image: url('img/galeria1.jpg');">
-          <div class="texto-slide">Colección Floral – Elegancia que florece en cada temporada.</div>
+    <!-- ✅ SECCIÓN 7: FOOTER -->
+    <footer>
+      <div class="footer-col footer-logo">
+        <img src="images/logo-daniela.png" alt="Logo Daniela Sandoval" class="logo-footer" />
+        <p>Moda que empodera tu esencia</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
-        <div class="slide" style="background-image: url('img/galeria2.jpg');">
-          <div class="texto-slide">Estilo Urbano – Comodidad y actitud para todos tus días.</div>
-        </div>
-        <div class="slide" style="background-image: url('img/galeria3.jpg');">
-          <div class="texto-slide">Minimal Chic – Menos es más, y más estilizado.</div>
-        </div>
-        <div class="slide" style="background-image: url('img/galeria4.jpg');">
-          <div class="texto-slide">Verano Vivo – Colores que iluminan tu personalidad.</div>
-        </div>
-        <div class="slide" style="background-image: url('img/galeria5.jpg');">
-          <div class="texto-slide">Noche Elegante – Brilla con confianza donde vayas.</div>
-        </div>
-        <div class="slide" style="background-image: url('img/galeria6.jpg');">
-          <div class="texto-slide">Noche Elegante – Brilla con confianza donde vayas.</div>
-        </div>
-        <div class="slide" style="background-image: url('img/galeria7.jpg');">
-          <div class="texto-slide">Noche Elegante – Brilla con confianza donde vayas.</div>
-        </div>
-        <div class="botones-slider">
-          <button onclick="moverSlider(-1)"><i class="fas fa-chevron-left"></i></button>
-          <button onclick="moverSlider(1)"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </section>
+      </div>
 
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#categorias">Colecciones</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
 
-      <!-- ✅ SECCIÓN 5: NOSOTROS -->
-      <section id="nosotros" class="seccion-nosotros">
-        <div class="contenedor-nosotros">
-          <div class="texto-nosotros">
-            <h2>Sobre Daniela Sandoval Boutique</h2>
-            <p>
-              Nuestra boutique nace de la pasión por la moda femenina, el
-              detalle y la elegancia. Nos dedicamos a vestir a mujeres
-              auténticas con estilo moderno, delicado y poderoso.
-            </p>
-            <p>
-              Con más de 5 años de experiencia en el mundo de la moda, hemos
-              creado colecciones que inspiran, empoderan y reflejan belleza en
-              cada costura.
-            </p>
-          </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <ul class="footer-contact">
+          <li>Email: contacto@danielasandoval.com</li>
+          <li>Tel: 602 8333749</li>
+          <li>Cali, Colombia</li>
+        </ul>
+      </div>
 
-          <div class="imagen-nosotros slider-nosotros">
-            <img src="img/galeria1.jpeg" alt="Nosotras 1" class="slide active" />
-            <img src="img/galeria2.jpeg" alt="Nosotras 2" class="slide" />
-            <img src="img/galeria3.jpeg " alt="Nosotras 3" class="slide" />
-          </div>
-        </div>
-      </section>
-
-      <!-- ✅ SECCIÓN 6: CONTACTO -->
-      <section class="seccion-contacto-bg">
-        <div class="contenedor-contacto-bg">
-
-          <!-- Formulario -->
-          <form class="formulario-contacto-bg">
-            <h2>Escríbenos para una mejor asesoría</h2>
-            <input type="text" placeholder="Tu nombre" required />
-            <input type="email" placeholder="Tu correo" required />
-            <textarea rows="4" placeholder="Tu mensaje..." required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-
-          <!-- Frase motivacional e imagen -->
-          <div class="texto-contacto-info">
-            <h3>Conecta con tu estilo</h3>
-            <p>"Tu mejor versión empieza con la actitud y un buen outfit"</p>
-            <img src="images/contacto-chic.jpg" alt="Imagen inspiracional" />
-          </div>
-
-        </div>
-
-        <!-- Redes sociales -->
-        <div class="redes-contacto">
-          <a href="#" class="red fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://wa.me/573002003000" class="red wp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="red ig" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </section>
-
-      <!-- ✅ SECCIÓN 7: FOOTER -->
-      <footer>
-        <div class="footer-col footer-logo">
-          <img src="images/logo-daniela.png" alt="Logo Daniela Sandoval" class="logo-footer" />
-          <p>Moda que empodera tu esencia</p>
-          <div class="footer-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Enlaces</h4>
-          <ul class="footer-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#categorias">Colecciones</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contáctanos</h4>
-          <ul class="footer-contact">
-            <li>Email: contacto@danielasandoval.com</li>
-            <li>Tel: 602 8333749</li>
-            <li>Cali, Colombia</li>
-          </ul>
-        </div>
-
-        <div class="footer-bottom">
-          &copy; 2025 sebastianruiz. Todos los derechos reservados.
-        </div>
-      </footer>
+      <div class="footer-bottom">
+        &copy; 2025 sebastianruiz. Todos los derechos reservados.
+      </div>
+    </footer>
 
   </main>
 

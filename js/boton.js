@@ -88,7 +88,7 @@ function actualizarResumen() {
           </div>
 
           <button class="boton-eliminar" onclick="eliminarDelCarrito(${index})" title="Eliminar">
-            🧹
+            🗑️
           </button>
         </div>
       `;

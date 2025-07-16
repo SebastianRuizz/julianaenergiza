@@ -1,27 +1,22 @@
-const slides = document.querySelectorAll('.slide');
-  let actual = 0;
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+const total = slides.length;
 
-  // Asegura que el primer slide esté activo
-  slides[actual].classList.add('active');
+function mostrarSlide(i) {
+  slides.forEach(slide => slide.classList.remove("activo"));
+  slides[i].classList.add("activo");
+}
 
-  function mostrarSlide(index) {
-    const siguiente = (index + slides.length) % slides.length;
+function siguienteSlide() {
+  index = (index + 1) % total;
+  mostrarSlide(index);
+}
 
-    if (siguiente === actual) return;
+document.querySelector(".next").addEventListener("click", siguienteSlide);
+document.querySelector(".prev").addEventListener("click", () => {
+  index = (index - 1 + total) % total;
+  mostrarSlide(index);
+});
 
-    // Activar primero el nuevo
-    slides[siguiente].classList.add('active');
-
-    // Luego desactivar el anterior con un pequeño delay
-    setTimeout(() => {
-      slides[actual].classList.remove('active');
-      actual = siguiente;
-    }, 50);
-  }
-
-  function moverSlider(direccion) {
-    mostrarSlide(actual + direccion);
-  }
-
-  // Cambio automático de slide cada 5 segundos
-  setInterval(() => moverSlider(1), 5000);
+// Auto carrusel
+setInterval(siguienteSlide, 6000);

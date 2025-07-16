@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Daniela Sandoval Boutique</title>
+  <link rel="stylesheet" href="/css/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Fondo Parallax -->
+  <div class="parallax-bg"></div>
+
+  <main class="checkout-container">
+    <!-- Formulario de Pago -->
+     <!-- Resumen del Pedido (SOLO muestra) -->
+    <aside class="resumen glass">
+      <img src="/img/logo.png" alt="Logo" class="logo-checkout">
+      <h3>Resumen de compra</h3>
+      <div id="resumen-productos"></div>
+      <div class="total">TOTAL: <span id="total-checkout">$0</span></div>
+    </aside>
+    <section class="formulario glass">
+      
+      <h2>Identificación</h2>
+      <form id="formulario-pago">
+        <div class="row">
+          <div class="col">
+            <label>Correo electrónico *</label>
+            <input type="email" id="correo" required placeholder="Correo">
+          </div>
+          <div class="col">
+            <label>Celular *</label>
+            <input type="tel" id="celular" required placeholder="Celular">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Nombres *</label>
+            <input type="text" id="nombre" required placeholder="Nombre">
+          </div>
+          <div class="col">
+            <label>Apellidos *</label>
+            <input type="text" id="apellido" required placeholder="Apellido">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Tipo de documento</label>
+            <select id="tipo-doc" required>
+              <option value="">Selecciona...</option>
+              <option>C.C.</option>
+              <option>C.E.</option>
+              <option>PASAPORTE</option>
+            </select>
+          </div>
+          <div class="col">
+            <label>Número de documento</label>
+            <input type="text" id="numero-doc" required placeholder="Número">
+          </div>
+        </div>
+
+        <h2>Envío</h2>
+        <div class="row">
+          <div class="col">
+            <label>Departamento</label>
+            <select id="departamento" required></select>
+          </div>
+          <div class="col">
+            <label>Municipio</label>
+            <select id="municipio" required></select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Dirección *</label>
+            <input type="text" id="direccion" required placeholder="Dirección">
+          </div>
+          <div class="col">
+            <label>Barrio *</label>
+            <input type="text" id="barrio" required placeholder="Barrio">
+          </div>
+        </div>
+
+        <div class="botones-volver">
+          <a href="index.html#coleccion" class="btn-volver">➕ Añadir más productos</a>
+        </div>
+
+        <!-- ✅ MOVIDO AQUÍ -->
+        <div class="tyc">
+          <input type="checkbox" id="acepta-tyc" required />
+          <label for="acepta-tyc">Acepto los <a href="terminos.html" target="_blank">términos y condiciones</a></label>
+        </div>
+
+        <h2>Pago</h2>
+        <button type="submit" class="btn-pago btn-wompi">Pagos nacionales (Nequi, tarjeta, PSE)</button>
+        <button type="button" class="btn-pago btn-paypal">PayPal (internacional)</button>
+        <img src="/img/logo.png" alt="Logo" class="logo-checkout">
+      </form>
+    </section>
+
+    
+
+
+  </main>
+
+
+
+
+
+  <script src="/js/checkout.js"></script>
+
+</body>
+
+</html>
