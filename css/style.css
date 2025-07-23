@@ -1,12 +1,21 @@
-
 /* ---------------------------
    RESET Y BASE
 --------------------------- */
-* { margin: 0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
+
 }
+h1,h2 {
+  font-family: 'Source Serif 4', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff; /* o el color que desees */
+  text-transform: uppercase; /* si quieres todo en mayúsculas */
+  letter-spacing: 1px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,7 +41,7 @@ a {
   top: 0;
   width: 220px;
   height: 100vh;
-  background: #ffffff;
+  background: #c0c0c0;
   border-right: 1px solid #eee;
   display: flex;
   flex-direction: column;
@@ -71,8 +80,8 @@ a {
 }
 
 .sidebar .menu a:hover {
-  color: #d8af0b;
-
+  color: #dbdb3d;
+ text-decoration: underline;
 }
 
 .sidebar-bottom {
@@ -85,7 +94,7 @@ a {
 .modo-btn {
   background: #f4f4f4;
   border: none;
-  padding: 8px 12px;
+  padding: 5px 12px;
   border-radius: 20px;
   font-weight: 500;
   cursor: pointer;
@@ -93,27 +102,29 @@ a {
 }
 
 .modo-btn:hover {
-  background: #e8e004d0;
-  color: rgb(14, 14, 14);
+  background: #373735d0;
+  color: rgb(240, 236, 236);
 }
 
 .sidebar .redes {
-  display: flex;
+  display:inline-flex;
   gap: 10px;
 }
 
 .sidebar .redes a {
-  color: #4c4a4a;
-  font-size: 18px;
+  color: #000000;
+  font-size: 20px;
   transition: 0.3s;
 }
 
 .sidebar .redes .fa-instagram:hover {
   color: #e40885;
 }
+
 .sidebar .redes .fa-facebook-f:hover {
   color: #0b61f4;
 }
+
 .sidebar .redes .fa-whatsapp:hover {
   color: #0cf208;
 }
@@ -158,10 +169,12 @@ body.dark-mode .menu a:hover,
 body.dark-mode .redes a:hover {
   color: #cdb40eee;
 }
-.body.dark-mode .modo-btn:hover{
+
+.body.dark-mode .modo-btn:hover {
   background: #b6b4b4;
   color: #131212ee;
 }
+
 body.dark-mode .hamburger {
   background: #222;
   color: #eee;
@@ -185,107 +198,129 @@ body.dark-mode .hamburger {
 .sidebar.visible .logo {
   display: block;
 }
+
 /* ---------------------------
    HERO CON VIDEO
 --------------------------- */
 .hero-video {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Capa semitransparente sobre el video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  z-index: 2;
+}
+
+/* Contenido centrado encima */
+.contenido-hero {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contenido-hero h1 {
   
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeDown 1s ease-out;
+}
+
+.contenido-hero p {
+  font-family: 'League Script', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #fff; /* o el color que desees */
+  /*text-transform: uppercase;  si quieres todo en mayúsculas */
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  animation: fadeUp 1.5s ease-out;
+}
+
+.btn-hero {
+  background: #1616165f;
+  color: #e9e9e9;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  animation: fadeUp 2s ease-out;
+}
+
+.btn-hero:hover {
+  background: #a79702b8;
+  color: white;
+}
+
+/* Animaciones */
+@keyframes fadeDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
   }
-  
-  .video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Capa semitransparente sobre el video */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
-    z-index: 2;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  /* Contenido centrado encima */
-  .contenido-hero {
-    position: relative;
-    z-index: 3;
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .contenido-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    animation: fadeDown 1s ease-out;
+    font-size: 2rem;
   }
-  
+
   .contenido-hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    animation: fadeUp 1.5s ease-out;
+    font-size: 1rem;
   }
-  
-  .btn-hero {
-    background: #ffffff;
-    color: #d16ba5;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    animation: fadeUp 2s ease-out;
-  }
-  
-  .btn-hero:hover {
-    background: #d16ba5;
-    color: white;
-  }
-  
-  /* Animaciones */
-  @keyframes fadeDown {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  
-  @keyframes fadeUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .contenido-hero h1 {
-      font-size: 2rem;
-    }
-  
-    .contenido-hero p {
-      font-size: 1rem;
-    }
-  }
- 
+}
+
 /* ---------------------------
    SECCIÓN SERVICIOS MODERNA (con hover corregido)
 --------------------------- */
@@ -296,7 +331,7 @@ body.dark-mode .hamburger {
   background-image: url("../img/bg-servicios.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+
   overflow: hidden;
   z-index: 1;
 }
@@ -316,8 +351,8 @@ body.dark-mode .hamburger {
   min-height: 320px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.4s ease;
   opacity: 0;
   transform: scale(1) translateY(30px);
@@ -327,9 +362,17 @@ body.dark-mode .hamburger {
   z-index: 1;
 }
 
-.tarjeta-servicio:nth-child(1) { animation-delay: 0.2s; }
-.tarjeta-servicio:nth-child(2) { animation-delay: 0.4s; }
-.tarjeta-servicio:nth-child(3) { animation-delay: 0.6s; }
+.tarjeta-servicio:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.tarjeta-servicio:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.tarjeta-servicio:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 .tarjeta-servicio:hover {
   transform: scale(1.05) translateY(0);
@@ -340,7 +383,7 @@ body.dark-mode .hamburger {
 
 .tarjeta-servicio i {
   font-size: 40px;
-  color: #d16ba5;
+  color: #b44a4a;
   margin-bottom: 15px;
 }
 
@@ -369,14 +412,67 @@ body.dark-mode .hamburger {
     padding: 20px;
   }
 }
-/* ---------------------------
-   SECCIÓN CATEGORÍAS DE ROPA
---------------------------- */
+.whatsapp-section {
+  background: linear-gradient(90deg, #81bc96, #d3d9d8); /* tonos WhatsApp */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.whatsapp-content .texto h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.whatsapp-content .texto p {
+  font-size: 1.1rem;
+  margin: 5px 0 0;
+}
+
+.whatsapp-boton {
+  background: white;
+  color: #128C7E;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-boton i {
+  font-size: 1.5rem;
+}
+
+.whatsapp-boton:hover {
+  background: #e9f8f1;
+  color: #075e54;
+}
+
+
 /* === SECCIÓN COLECCIÓN === */
 .coleccion {
-  max-width: 1200px;
-  margin: 80px auto;
+  max-width: 100%;
+ 
   padding: 0 20px;
+   background-image: url("../img/bg-servicios.jpg");
 }
 
 .coleccion h2 {
@@ -434,7 +530,7 @@ body.dark-mode .hamburger {
   scroll-snap-align: start;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -492,10 +588,11 @@ body.dark-mode .hamburger {
   display: none;
   position: fixed;
   z-index: 9999;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease;
@@ -515,7 +612,7 @@ body.dark-mode .hamburger {
   width: auto;
   max-height: 80vh;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .cerrar-modal {
@@ -539,7 +636,7 @@ body.dark-mode .hamburger {
 }
 
 .botones-navegacion button {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   border: none;
   font-size: 2rem;
@@ -550,18 +647,30 @@ body.dark-mode .hamburger {
 }
 
 .botones-navegacion button:hover {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* Animaciones */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* ---------------------------
@@ -571,7 +680,7 @@ BOTON DE COMPRAS
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #d16ba5;
+  background: #7b7b7a;
   color: white;
   border-radius: 50%;
   width: 50px;
@@ -589,7 +698,7 @@ BOTON DE COMPRAS
   bottom: 2px;
   right: 2px;
   background: white;
-  color: #d16ba5;
+  color: #030303;
   font-size: 0.8rem;
   width: 18px;
   height: 18px;
@@ -603,12 +712,12 @@ BOTON DE COMPRAS
   position: fixed;
   top: 80px;
   right: 20px;
-  background: #fff;
+  background: #ffffff;
   width: 320px;
   max-height: 80vh;
   overflow-y: auto;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   padding: 20px;
   z-index: 998;
   font-family: 'Segoe UI', sans-serif;
@@ -629,7 +738,7 @@ BOTON DE COMPRAS
 }
 
 .btn-pago {
-  background: #d16ba5;
+  background: #c04e2f;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -644,11 +753,11 @@ BOTON DE COMPRAS
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  background: #fafafa;
+  background: #e7e5e53f;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
@@ -672,7 +781,7 @@ BOTON DE COMPRAS
   padding: 4px 10px;
   border: none;
   border-radius: 20px;
-  background: #eaeaea;
+  background: #f9f8f8;
   font-size: 0.8rem;
   appearance: none;
   font-family: inherit;
@@ -681,7 +790,7 @@ BOTON DE COMPRAS
 
 .precio-item {
   font-weight: bold;
-  color: #d16ba5;
+  color: #d85430;
   margin-top: 5px;
 }
 
@@ -707,22 +816,27 @@ BOTON DE COMPRAS
     width: 90vw;
     max-width: 400px;
   }
+
   .item-carrito {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .item-carrito img {
     width: 100%;
     height: auto;
   }
+
   .item-carrito .info {
     width: 100%;
   }
+
   .boton-eliminar {
     right: 10px;
   }
 }
+
 /* ---------------------------
    GALERÍA MINIMALISTA
 --------------------------- */
@@ -742,7 +856,8 @@ BOTON DE COMPRAS
 
 .slide {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -766,7 +881,7 @@ BOTON DE COMPRAS
   position: absolute;
   bottom: 40px;
   left: 40px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   padding: 20px 30px;
   border-radius: 10px;
   color: #fff;
@@ -787,7 +902,8 @@ BOTON DE COMPRAS
 }
 
 /* Controles */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -800,8 +916,14 @@ BOTON DE COMPRAS
   z-index: 2;
   border-radius: 50%;
 }
-.prev { left: 20px; }
-.next { right: 20px; }
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
 
 @media (max-width: 768px) {
   .texto-slide {
@@ -824,7 +946,8 @@ BOTON DE COMPRAS
 /* QUIENES SOMOS NOSOTROS*/
 /* === NOSOTROS: Parallax Background === */
 .parallax-nosotros {
-  background-image: url('/img/blusas1-back.jpg'); /* Cambia esta ruta a tu imagen */
+  background-image: url('/img/blusas1-back.jpg');
+  /* Cambia esta ruta a tu imagen */
 
   background-position: center;
   background-size: cover;
@@ -838,115 +961,97 @@ BOTON DE COMPRAS
 }
 
 /* === NOSOTROS: Estructura === */
+/* Fondo con imagen parallax */
 .nosotros-section {
   position: relative;
-  padding: 100px 20px 0;
-  overflow: hidden;
+  background: url('/img/nosotros.jpg') center center / cover no-repeat fixed;
+  padding: 80px 0;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
-.nosotros-container {
+.nosotros-contenido {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
+  margin: 20vh auto ;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.glass-nosotros {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+/* Cuadro glass a la izquierda */
+.glass-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-}
-
-.nosotros-texto {
-  flex: 1 1 50%;
-}
-
-.nosotros-texto h2 {
-  font-size: 2.5rem;
-  color: #f6d365;
-  margin-bottom: 20px;
-}
-
-.nosotros-texto h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  padding: 40px;
   color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-.nosotros-texto p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* === Imagen a la derecha === */
-.nosotros-imagen {
-  flex: 1 1 45%;
-}
-
-.nosotros-imagen img {
-  width: 80%;
-  border-radius: 16px;
-  object-fit: cover;
-}
-
-/* === Ticker inferior === */
-.ticker {
+/* Logo a la derecha */
+.nosotros-logo img {
+  max-width: 400px;
   width: 100%;
-  background: #000;
-  color: #fff;
-  overflow: hidden;
-  padding: 15px 0;
-  margin-top: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: transparent;
 }
 
-.ticker p {
+/* Línea deslizante inferior */
+.ticker {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.701);
+  color: #f0f0ef;
   white-space: nowrap;
-  animation: scroll-left 30s linear infinite;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 0.95rem;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.ticker span {
+  display: inline-block;
   padding-left: 100%;
+  animation: mover 20s linear infinite;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+@keyframes mover {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
-/* === Responsive === */
+/* Responsivo para celular */
 @media (max-width: 768px) {
-  .nosotros-container {
+  .nosotros-contenido {
     flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .glass-box {
     padding: 30px 20px;
+    margin-bottom: 30px;
+    text-align: left;
   }
 
-  .nosotros-texto, .nosotros-imagen {
-    flex: 1 1 100%;
-    text-align: center;
+  .nosotros-logo img {
+    max-width: 250px;
   }
 
-  .nosotros-texto h2 {
-    font-size: 2rem;
-  }
-
-  .nosotros-texto h3 {
-    font-size: 1.3rem;
+  .ticker span {
+    font-size: 0.9rem;
   }
 }
+
 
 
 /*Contacto*/
@@ -962,8 +1067,10 @@ BOTON DE COMPRAS
 .seccion-contacto-bg::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
@@ -983,11 +1090,11 @@ BOTON DE COMPRAS
 .formulario-contacto-bg {
   flex: 1;
   min-width: 300px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   color: white;
 }
 
@@ -1045,7 +1152,7 @@ BOTON DE COMPRAS
   max-width: 300px;
   margin-top: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .redes-contacto {
@@ -1064,7 +1171,7 @@ BOTON DE COMPRAS
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -1187,7 +1294,3 @@ footer {
     justify-content: center;
   }
 }
-
-
-
-
